@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:poonolil_textiles_ui/routes.dart';
 
 import '../constant/colors.dart';
 import '../widgets/custom_button.dart';
@@ -45,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 15.h),
                   CustomButton(
-                    onTap: () {},
+                    onTap: () => Get.toNamed(otpScreen),
                     iconWidget: Image.asset(
                       'images/arrow.png',
                       height: 20,
@@ -86,7 +88,6 @@ class LoginScreen extends StatelessWidget {
                         onTap: null,
                         imageIcon: Icons.facebook_outlined,
                       ),
-                      SizedBox(width: 10.w),
                     ],
                   ),
                   SizedBox(height: 50.h)
