@@ -127,7 +127,7 @@ class OtpScreen extends StatelessWidget {
                       //crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         CustomButton(
-                          onTap: () => Get.toNamed(homeScreen),
+                          onTap: () => Get.toNamed(navigationScreen),
                           iconWidget: Image.asset(
                             'images/arrow.png',
                             height: 20,
