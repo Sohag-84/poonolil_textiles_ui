@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:poonolil_textiles_ui/routes.dart';
+import 'package:poonolil_textiles_ui/views/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.red));
+      SystemUiOverlayStyle(statusBarColor: Color(0xFF170906).withOpacity(.50)));
   runApp(const MyApp());
 }
 
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Center(child: Text("data")),
+          initialRoute: loginScreen,
+          getPages: pages,
         );
       },
     );
