@@ -33,8 +33,8 @@ class CustomHomePageBestSellingContainer extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Container(
-                height: 93,
-                width: 256,
+                height: 93.h,
+                width: 256.w,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
