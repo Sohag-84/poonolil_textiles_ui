@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:poonolil_textiles_ui/routes.dart';
-import 'package:poonolil_textiles_ui/views/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
