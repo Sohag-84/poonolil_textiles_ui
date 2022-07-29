@@ -57,7 +57,17 @@ class SearchScreen extends StatelessWidget {
               width: 314.w,
               height: 49.h,
               child: TextFormField(
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                  color: Colour.white_color,
+                ),
                 decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFFDBB98F).withOpacity(.40),
+                    ),
+                  ),
                   fillColor: Color(0xFF3F393D),
                   filled: true,
                   hintText: "SEARCH PRODUCT",
