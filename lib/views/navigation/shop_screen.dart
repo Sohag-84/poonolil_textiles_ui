@@ -66,7 +66,7 @@ class ShopScreen extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius:
-                                            BorderRadius.circular(180.r),
+                                        BorderRadius.circular(180.r),
                                       ),
                                       child: Center(
                                         child: Text(

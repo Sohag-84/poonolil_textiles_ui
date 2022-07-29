@@ -185,7 +185,7 @@ class ProfileScreen extends StatelessWidget {
                         title: "ORDERS",
                       ),
                       customListTile(
-                        onTap: null,
+                        onTap: ()=> Get.toNamed(wishListScreen),
                         leadingIcon: Icons.favorite_outline,
                         title: "WISHLIST",
                       ),
