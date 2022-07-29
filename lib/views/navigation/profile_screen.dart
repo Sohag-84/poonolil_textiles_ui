@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:poonolil_textiles_ui/constant/colors.dart';
+import 'package:poonolil_textiles_ui/routes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -174,14 +175,17 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20.h),
                       customListTile(
+                        onTap: ()=> Get.toNamed(addressScreen),
                         leadingIcon: Icons.location_city_outlined,
                         title: "ADDRESS",
                       ),
                       customListTile(
+                        onTap: null,
                         leadingIcon: Icons.cake_outlined,
                         title: "ORDERS",
                       ),
                       customListTile(
+                        onTap: null,
                         leadingIcon: Icons.favorite_outline,
                         title: "WISHLIST",
                       ),
@@ -193,14 +197,17 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20.h),
                       customListTile(
+                        onTap: null,
                         leadingIcon: FontAwesomeIcons.circleExclamation,
                         title: "FAQ",
                       ),
                       customListTile(
+                        onTap: null,
                         leadingIcon: Icons.headset_mic_outlined,
                         title: "HELP CENTER",
                       ),
                       customListTile(
+                        onTap: null,
                         leadingIcon: Icons.settings_outlined,
                         title: "SETTINGS",
                       ),
@@ -268,8 +275,9 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  ListTile customListTile({required leadingIcon, required title}) {
+  ListTile customListTile({required onTap,required leadingIcon, required title}) {
     return ListTile(
+      onTap: onTap,
       leading: Icon(
         leadingIcon,
         color: Colors.black,
@@ -423,7 +431,7 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  InkWell buildContainerButton(
+  static InkWell buildContainerButton(
       {required final onTap, required text, required icon}) {
     return InkWell(
       onTap: onTap,
