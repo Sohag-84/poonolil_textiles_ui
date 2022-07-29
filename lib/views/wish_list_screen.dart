@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 import '../constant/colors.dart';
 import '../widgets/custom_circle_container.dart';
@@ -45,7 +46,10 @@ class WishListScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              FaIcon(FontAwesomeIcons.bars),
+                              IconButton(
+                                onPressed: () => Get.back(),
+                                icon: Icon(Icons.arrow_back_outlined),
+                              ),
                               Text(
                                 "Wishlist",
                                 style: TextStyle(
