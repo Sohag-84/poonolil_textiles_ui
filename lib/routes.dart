@@ -2,6 +2,7 @@
 
 import 'package:get/get.dart';
 import 'package:poonolil_textiles_ui/views/address_screen.dart';
+import 'package:poonolil_textiles_ui/views/order_screen.dart';
 
 import 'views/navigation/bottom_navigation_bar.dart';
 import 'views/navigation/home_screen.dart';
@@ -13,6 +14,7 @@ String otpScreen = '/otp-screen';
 String homeScreen = '/home-screen';
 String navigationScreen = '/navigationBar-screen';
 String addressScreen = '/address-screen';
+String orderScreen = '/order-screen';
 
 List<GetPage> pages = [
   GetPage(name: loginScreen, page: () => LoginScreen()),
@@ -20,4 +22,5 @@ List<GetPage> pages = [
   GetPage(name: homeScreen, page: () => HomeScreen()),
   GetPage(name: navigationScreen, page: () => NavigationBar()),
   GetPage(name: addressScreen, page: () => AddressScreen()),
+  GetPage(name: orderScreen, page: () => OrderScreen()),
 ];

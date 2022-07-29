@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:poonolil_textiles_ui/constant/colors.dart';
 import 'package:poonolil_textiles_ui/views/navigation/profile_screen.dart';
-import 'package:poonolil_textiles_ui/widgets/custom_button.dart';
 
 class AddressScreen extends StatelessWidget {
   const AddressScreen({Key? key}) : super(key: key);

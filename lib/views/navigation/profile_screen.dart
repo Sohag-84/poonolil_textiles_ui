@@ -175,12 +175,12 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20.h),
                       customListTile(
-                        onTap: ()=> Get.toNamed(addressScreen),
+                        onTap: () => Get.toNamed(addressScreen),
                         leadingIcon: Icons.location_city_outlined,
                         title: "ADDRESS",
                       ),
                       customListTile(
-                        onTap: null,
+                        onTap: () => Get.toNamed(orderScreen),
                         leadingIcon: Icons.cake_outlined,
                         title: "ORDERS",
                       ),
@@ -275,7 +275,8 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  ListTile customListTile({required onTap,required leadingIcon, required title}) {
+  ListTile customListTile(
+      {required onTap, required leadingIcon, required title}) {
     return ListTile(
       onTap: onTap,
       leading: Icon(
@@ -324,7 +325,7 @@ class ProfileScreen extends StatelessWidget {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                 child: Container(
-                  height: 550,
+                  height: 570.h,
                   width: 361.w,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
