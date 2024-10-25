@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,7 +9,7 @@ import '../widgets/custom_button.dart';
 import '../widgets/custom_icon_button.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +17,24 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           width: double.infinity,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-                    'images/login.png',
-                  ),
-                  fit: BoxFit.cover)),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                'images/login.png',
+              ),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 children: [
-                  Image.asset('images/logo.png', width: 100.w, height: 220.h),
+                  Image.asset(
+                    'images/logo.png',
+                    width: 100.w,
+                    height: 220.h,
+                  ),
                 ],
               ),
               Column(
@@ -74,18 +78,17 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomIconButton(
-                        onTap: null,
-                        imageIcon:
-                          Icons.apple_outlined,
-
+                        onTap: () {},
+                        imageIcon: Icons.apple_outlined,
                       ),
                       SizedBox(width: 10.w),
                       CustomIconButton(
-                          onTap: null,
-                          imageIcon: FontAwesomeIcons.google),
+                        onTap: () {},
+                        imageIcon: FontAwesomeIcons.google,
+                      ),
                       SizedBox(width: 10.w),
                       CustomIconButton(
-                        onTap: null,
+                        onTap: () {},
                         imageIcon: Icons.facebook_outlined,
                       ),
                     ],
@@ -100,5 +103,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +8,7 @@ import '../../widgets/custom_home_page_best_selling_container.dart';
 import '../../widgets/custom_lookbook_container.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,10 +55,14 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(180.r),
                       ),
                       child: Center(
-                          child: Text(
-                        "1",
-                        style: TextStyle(color: Colors.white, fontSize: 8.sp),
-                      )),
+                        child: Text(
+                          "1",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 8.sp,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -82,12 +84,15 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              ///home image
               Container(
-                height: 550,
+                height: MediaQuery.sizeOf(context).height - 190.h,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('images/home.png'), fit: BoxFit.cover),
+                    image: AssetImage('images/home.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -138,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                         letterSpacing: 1,
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     buildButton(onTap: null, text: "GO TO COLLECTION"),
                     SizedBox(height: 60.h),
                   ],
@@ -158,42 +163,42 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 22.sp,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF170906),
+                              color: const Color(0xFF170906),
                             ),
                           ),
                         ),
                         SizedBox(height: 10.h),
                         SizedBox(
-                          height: 105.h,
+                          height: 110.h,
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk.png',
                                 text: "SILK",
                               ),
                               SizedBox(width: 12.h),
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk_2.png',
                                 text: "SILK COTTON",
                               ),
                               SizedBox(width: 12.h),
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk_3.png',
                                 text: "COTTON",
                               ),
                               SizedBox(width: 12.h),
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk.png',
                                 text: "WORK",
                               ),
                               SizedBox(width: 12.h),
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk_2.png',
                                 text: "COTTON",
                               ),
                               SizedBox(width: 12.h),
-                              CustomCircleContainer(
+                              const CustomCircleContainer(
                                 image: 'images/silk.png',
                                 text: "SILK",
                               ),
@@ -219,37 +224,37 @@ class HomeScreen extends StatelessWidget {
                                 fontSize: 22.sp, fontWeight: FontWeight.w400),
                           ),
                         ),
-                        SizedBox(height: 25),
+                        const SizedBox(height: 25),
                         SizedBox(
                           height: 335,
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              CustomHomePageBestSellingContainer(
+                              const CustomHomePageBestSellingContainer(
                                 image: 'images/img_2.png',
                                 title: "Black Satin Saree",
                                 amount: "BDT 2000",
                               ),
                               SizedBox(width: 20.w),
-                              CustomHomePageBestSellingContainer(
+                              const CustomHomePageBestSellingContainer(
                                 image: 'images/img_4.png',
                                 title: "Dhakai Benarasi",
                                 amount: "BDT 9000",
                               ),
                               SizedBox(width: 20.w),
-                              CustomHomePageBestSellingContainer(
+                              const CustomHomePageBestSellingContainer(
                                 image: 'images/img_6.png',
                                 title: "Silk Saree",
                                 amount: "BDT 12000",
                               ),
                               SizedBox(width: 20.w),
-                              CustomHomePageBestSellingContainer(
+                              const CustomHomePageBestSellingContainer(
                                 image: 'images/img_3.png',
                                 title: "Katan Saree",
                                 amount: "BDT 5000",
                               ),
                               SizedBox(width: 20.w),
-                              CustomHomePageBestSellingContainer(
+                              const CustomHomePageBestSellingContainer(
                                 image: 'images/img_4.png',
                                 title: "Tangail Handloom Saree",
                                 amount: "BDT 7500",
@@ -268,7 +273,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.circular(15.r),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage('images/imge_7.png'),
                           fit: BoxFit.cover,
                         ),
@@ -280,10 +285,10 @@ class HomeScreen extends StatelessWidget {
                             height: 84.h,
                             width: 312.w,
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                 begin: Alignment.topLeft,
                                 end: Alignment.topRight,
-                                colors: const [
+                                colors: [
                                   Color(0xFF93849C),
                                   Color(0xFF9880A4),
                                   Color(0xFF8F819B),
@@ -326,7 +331,7 @@ class HomeScreen extends StatelessWidget {
                   Container(
                     height: 340.h,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('images/img_8.png'),
                         fit: BoxFit.cover,
@@ -345,7 +350,7 @@ class HomeScreen extends StatelessWidget {
                                   color: Colour.white_color,
                                   letterSpacing: 1.3),
                             ),
-                            SizedBox(height: 3),
+                            const SizedBox(height: 3),
                             Text(
                               "Tellus Vel Lobortis Neque, Urna, Quisque Tempor",
                               style: TextStyle(
@@ -394,28 +399,28 @@ class HomeScreen extends StatelessWidget {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              CustomLookBooksContainer(
+                              const CustomLookBooksContainer(
                                 image: 'images/img_9.png',
                                 title: "Manja Kili",
                                 desription:
                                     "Tellus Vel Lobortis Neque, Urna,\nQuisque Tempor Pellentesque ",
                               ),
                               SizedBox(width: 20.w),
-                              CustomLookBooksContainer(
+                              const CustomLookBooksContainer(
                                 image: 'images/img_1.png',
                                 title: "Manja Kili",
                                 desription:
                                     "Tellus Vel Lobortis Neque, Urna,\nQuisque Tempor Pellentesque ",
                               ),
                               SizedBox(width: 20.w),
-                              CustomLookBooksContainer(
+                              const CustomLookBooksContainer(
                                 image: 'images/img_3.png',
                                 title: "Manja Kili",
                                 desription:
                                     "Tellus Vel Lobortis Neque, Urna,\nQuisque Tempor Pellentesque ",
                               ),
                               SizedBox(width: 20.w),
-                              CustomLookBooksContainer(
+                              const CustomLookBooksContainer(
                                 image: 'images/img_6.png',
                                 title: "Manja Kili",
                                 desription:
@@ -439,7 +444,7 @@ class HomeScreen extends StatelessWidget {
                         width: 76.w,
                       ),
                       SizedBox(width: 5.w),
-                      FaIcon(
+                      const FaIcon(
                         FontAwesomeIcons.satelliteDish,
                         color: Colors.red,
                       ),
@@ -466,7 +471,7 @@ class HomeScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey,
         borderRadius: BorderRadius.circular(15.r),
-        image: DecorationImage(
+        image: const DecorationImage(
           image: AssetImage('images/img_1.png'),
           fit: BoxFit.cover,
         ),
@@ -478,10 +483,10 @@ class HomeScreen extends StatelessWidget {
             height: 84.h,
             width: 312.w,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.topRight,
-                colors: const [
+                colors: [
                   Color(0xFF979192),
                   Color(0xFF9B9595),
                   Color(0xFFBBB3B0),
@@ -532,7 +537,7 @@ class HomeScreen extends StatelessWidget {
         height: 49.h,
         width: 314.w,
         decoration: BoxDecoration(
-          color: Color(0xFFD2C5BE).withOpacity(.60),
+          color: const Color(0xFFD2C5BE).withOpacity(.60),
           borderRadius: BorderRadius.circular(6.r),
         ),
         child: Align(

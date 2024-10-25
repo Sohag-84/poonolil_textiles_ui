@@ -1,16 +1,12 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import '../constant/colors.dart';
-import '../widgets/custom_circle_container.dart';
 import 'navigation/shop_screen.dart';
 
 class WishListScreen extends StatelessWidget {
-  const WishListScreen({Key? key}) : super(key: key);
+  const WishListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +23,7 @@ class WishListScreen extends StatelessWidget {
                 Container(
                   height: 589,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('images/img_19.png'),
                       fit: BoxFit.cover,
@@ -48,7 +44,7 @@ class WishListScreen extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () => Get.back(),
-                                icon: Icon(Icons.arrow_back_outlined),
+                                icon: const Icon(Icons.arrow_back_outlined),
                               ),
                               Text(
                                 "Wishlist",
@@ -140,13 +136,13 @@ class WishListScreen extends StatelessWidget {
                           color: Colour.primary_color,
                         ),
                         SizedBox(width: 3.w),
-                        Text("Sort")
+                        const Text("Sort")
                       ],
                     ),
                   ],
                 ),
                 SizedBox(height: 32.h),
-                CustomColumn(
+                const CustomColumn(
                   image: 'images/img_12.png',
                   title: 'Black Satin Saree',
                   description:
@@ -154,7 +150,7 @@ class WishListScreen extends StatelessWidget {
                   amount: '5000',
                 ),
                 SizedBox(height: 50.h),
-                CustomColumn(
+                const CustomColumn(
                   image: 'images/img_4.png',
                   title: 'Dhakai Benarasi',
                   description:
@@ -162,7 +158,7 @@ class WishListScreen extends StatelessWidget {
                   amount: '3000',
                 ),
                 SizedBox(height: 50.h),
-                CustomColumn(
+                const CustomColumn(
                   image: 'images/img_5.png',
                   title: 'Tangail Handloom Saree',
                   description:
@@ -170,7 +166,7 @@ class WishListScreen extends StatelessWidget {
                   amount: '7500',
                 ),
                 SizedBox(height: 50.h),
-                CustomColumn(
+                const CustomColumn(
                   image: 'images/img_14.png',
                   title: 'Katan Saree',
                   description:
@@ -178,14 +174,14 @@ class WishListScreen extends StatelessWidget {
                   amount: '25000',
                 ),
                 SizedBox(height: 50.h),
-                CustomColumn(
+                const CustomColumn(
                   image: 'images/img_13.png',
                   title: 'Silk Saree',
                   description:
                       '"Tellus Vel Lobortis Neque, Urna, Quisque\nTempor Pellentesque Ac Volutpat"',
                   amount: '9000',
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
               ],
             ),
           ),

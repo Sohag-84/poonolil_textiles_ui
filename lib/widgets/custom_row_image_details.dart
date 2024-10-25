@@ -1,12 +1,10 @@
-// ignore_for_file: unnecessary_brace_in_string_interps
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constant/colors.dart';
 
 class CustomRowImageDetails extends StatelessWidget {
-  final image;
+  final String image;
   final String title;
   final String sareeSize;
   final String sareeColor;
@@ -17,8 +15,8 @@ class CustomRowImageDetails extends StatelessWidget {
     required this.sareeSize,
     required this.sareeColor,
     required this.quantity,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +73,7 @@ class CustomRowImageDetails extends StatelessWidget {
           ],
         ),
         Text(
-          "${quantity}",
+          "$quantity",
           style: TextStyle(fontWeight: FontWeight.w400, fontSize: 11.sp),
         )
       ],

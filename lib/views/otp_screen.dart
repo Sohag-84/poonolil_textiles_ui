@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -9,7 +7,7 @@ import 'package:poonolil_textiles_ui/routes.dart';
 import '../widgets/custom_button.dart';
 
 class OtpScreen extends StatelessWidget {
-  const OtpScreen({Key? key}) : super(key: key);
+  const OtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +102,9 @@ class OtpScreen extends StatelessWidget {
                                   color: Colour.black_color.withOpacity(.60),
                                 ),
                               ),
-                              SizedBox(width: 4.w,),
+                              SizedBox(
+                                width: 4.w,
+                              ),
                               Text(
                                 "SEND IT AGAIN",
                                 style: TextStyle(
@@ -115,7 +115,6 @@ class OtpScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-
                         ],
                       ),
                     ],
@@ -156,7 +155,7 @@ class OtpScreen extends StatelessWidget {
       height: 72.h,
       width: 67.w,
       decoration: BoxDecoration(
-        color: Color(0xFF96351E).withOpacity(.20),
+        color: const Color(0xFF96351E).withOpacity(.20),
         borderRadius: BorderRadius.circular(5.r),
       ),
       child: Padding(

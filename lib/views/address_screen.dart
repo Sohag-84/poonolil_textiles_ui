@@ -7,7 +7,7 @@ import 'package:poonolil_textiles_ui/constant/colors.dart';
 import 'package:poonolil_textiles_ui/views/navigation/profile_screen.dart';
 
 class AddressScreen extends StatelessWidget {
-  const AddressScreen({Key? key}) : super(key: key);
+  const AddressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -6,15 +6,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/colors.dart';
 
 class CustomLookBooksContainer extends StatelessWidget {
-  final image;
+  final String image;
   final String title;
   final String desription;
   const CustomLookBooksContainer({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.desription,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

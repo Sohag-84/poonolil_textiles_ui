@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomIconButton extends StatelessWidget {
-  final onTap;
+  final VoidCallback onTap;
   final IconData imageIcon;
-  const CustomIconButton(
-      {Key? key, required this.onTap, required this.imageIcon})
-      : super(key: key);
+  const CustomIconButton({
+    super.key,
+    required this.onTap,
+    required this.imageIcon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,11 @@ class CustomIconButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: Color(0xFFFAF6F1).withOpacity(0.20),
             borderRadius: BorderRadius.circular(180.r)),
-        child: Icon(imageIcon,color: Colors.white,size: 28.h,),
+        child: Icon(
+          imageIcon,
+          color: Colors.white,
+          size: 28.h,
+        ),
       ),
     );
   }

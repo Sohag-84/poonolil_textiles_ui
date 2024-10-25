@@ -2,12 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../constant/colors.dart';
 
 class LiveScreen extends StatelessWidget {
-  const LiveScreen({Key? key}) : super(key: key);
+  const LiveScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -145,8 +144,10 @@ class LiveScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 15.w),
-                Icon(Icons.favorite_outline,color: Colour.white_color,),
-
+                Icon(
+                  Icons.favorite_outline,
+                  color: Colour.white_color,
+                ),
               ],
             ),
             SizedBox(height: 36.h),
