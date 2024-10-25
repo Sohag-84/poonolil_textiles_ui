@@ -16,7 +16,7 @@ class OtpScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height - 40.h,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
@@ -55,10 +55,11 @@ class OtpScreen extends StatelessWidget {
                           Text(
                             "Balendu Divakar",
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 18.sp,
-                                color: Colour.black_color,
-                                letterSpacing: 3),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 18.sp,
+                              color: Colour.black_color,
+                              letterSpacing: 3,
+                            ),
                           ),
                           SizedBox(height: 3.h),
                           Text(
@@ -74,7 +75,9 @@ class OtpScreen extends StatelessWidget {
                             "Enter in the oTP",
                             style: TextStyle(
                               fontWeight: FontWeight.w300,
-                              color: Colour.black_color.withOpacity(.60),
+                              color: Colour.black_color.withOpacity(
+                                .60,
+                              ),
                               fontSize: 12.sp,
                             ),
                           ),
@@ -123,7 +126,6 @@ class OtpScreen extends StatelessWidget {
                     flex: 1,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      //crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         CustomButton(
                           onTap: () => Get.toNamed(navigationScreen),
@@ -152,11 +154,11 @@ class OtpScreen extends StatelessWidget {
 
   Container buildContainer() {
     return Container(
-      height: 72.h,
-      width: 67.w,
+      height: 65.h,
+      width: 65.w,
       decoration: BoxDecoration(
         color: const Color(0xFF96351E).withOpacity(.20),
-        borderRadius: BorderRadius.circular(5.r),
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: Padding(
         padding: EdgeInsets.only(left: 10.w, right: 10.w),
