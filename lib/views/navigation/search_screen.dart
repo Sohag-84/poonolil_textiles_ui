@@ -1,12 +1,10 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constant/colors.dart';
 
 class SearchScreen extends StatelessWidget {
-  SearchScreen({Key? key}) : super(key: key);
+  SearchScreen({super.key});
 
   final List<String> _categories = [
     'Kanjipuram',
@@ -23,7 +21,7 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/img_10.png'),
           fit: BoxFit.cover,
@@ -38,7 +36,7 @@ class SearchScreen extends StatelessWidget {
             Text(
               "SEARCH",
               style: TextStyle(
-                fontSize: 28.sp,
+                fontSize: 20.sp,
                 fontWeight: FontWeight.w400,
                 color: Colour.white_color,
                 letterSpacing: 1,
@@ -53,6 +51,8 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.h),
+
+            ///search box
             SizedBox(
               width: 314.w,
               height: 49.h,
@@ -65,23 +65,27 @@ class SearchScreen extends StatelessWidget {
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBB98F).withOpacity(.40),
+                      color: const Color(0xFFDBB98F).withOpacity(.40),
                     ),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
-                  fillColor: Color(0xFF3F393D),
+                  fillColor: const Color(0xFF3F393D),
                   filled: true,
-                  hintText: "SEARCH PRODUCT",
+                  hintText: "Search product",
                   hintStyle: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
+                    fontSize: 12.sp,
                     color: Colour.white_color,
                   ),
-                  suffixIcon: Icon(
+                  suffixIcon: const Icon(
                     Icons.search_outlined,
                     color: Colors.white,
                   ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(6.r),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                 ),
               ),
@@ -90,7 +94,7 @@ class SearchScreen extends StatelessWidget {
             Text(
               "Popular Searches",
               style: TextStyle(
-                fontSize: 22.sp,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w400,
                 color: Colour.white_color,
               ),
@@ -99,7 +103,7 @@ class SearchScreen extends StatelessWidget {
             SizedBox(
               height: 28.h,
               child: ListView.builder(
-                scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.horizontal,
                   itemCount: _categories.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -112,13 +116,16 @@ class SearchScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: Padding(
-                            padding: EdgeInsets.only(left: 10.w,right: 10.w),
+                            padding: EdgeInsets.only(
+                              left: 10.w,
+                              right: 10.w,
+                            ),
                             child: Text(
                               _categories[index],
                               style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 11.sp,
-                                color: Colour.secondary_color,
+                                color: Colour.white_color.withOpacity(.85),
                               ),
                             ),
                           ),
